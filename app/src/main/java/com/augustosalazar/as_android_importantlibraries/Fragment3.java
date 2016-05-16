@@ -15,17 +15,19 @@ import org.greenrobot.eventbus.Subscribe;
 import java.util.Random;
 
 import eventBus.MessageChangeF2;
+import eventBus.MessageChangeF3;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Fragment2 extends Fragment {
+public class Fragment3 extends Fragment {
+
 
     @Override
     public void onStart() {
         super.onStart();
-        Log.d(General.TAG, "F2 On start");
+        Log.d(General.TAG, "F3 On start");
         EventBus.getDefault().register(this);
     }
 
@@ -39,14 +41,14 @@ public class Fragment2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_fragment2, container, false);
-        Log.d(General.TAG, "F2 onCreateView");
+        View v = inflater.inflate(R.layout.fragment_fragment3, container, false);
+
         return v;
     }
 
     @Subscribe
-    public void onMessageEvent(MessageChangeF2 event){
-        Log.d(General.TAG, "F2 onMessageEvent "+event.message);
+    public void onMessageEvent(MessageChangeF3 event){
+        Log.d(General.TAG, "F3 onMessageEvent "+event.message);
         Random rnd = new Random();
         int color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
         this.getView().setBackgroundColor(color);

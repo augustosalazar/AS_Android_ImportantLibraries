@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction ft = fm.beginTransaction();
         ft.add(R.id.HolderFragment1, new Fragment1());
         ft.add(R.id.HolderFragment2, new Fragment2());
+        ft.add(R.id.HolderFragment3, new Fragment3());
         ft.commit();
 
 

@@ -1,9 +1,9 @@
 package eventBus;
 
-public class MessageEvent {
+public class MessageChangeF3 {
     public final String message;
 
-    public MessageEvent(String message) {
+    public MessageChangeF3(String message) {
         this.message = message;
     }
 }
